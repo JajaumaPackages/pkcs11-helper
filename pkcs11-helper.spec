@@ -1,6 +1,6 @@
 Name:           pkcs11-helper
 Version:        1.07
-Release:        2%{?dist}
+Release:        3%{?dist}
 Summary:        A library for using PKCS#11 providers
 
 Group:          Development/Libraries
@@ -83,6 +83,9 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
+* Sun Jul 26 2009 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 1.07-3
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_12_Mass_Rebuild
+
 * Sat Jul 11 2009 Kalev Lember <kalev@smartlink.ee> - 1.07-2
 - Make devel package depend on automake for /usr/share/aclocal
 
