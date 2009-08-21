@@ -1,6 +1,6 @@
 Name:           pkcs11-helper
 Version:        1.07
-Release:        3%{?dist}
+Release:        4%{?dist}
 Summary:        A library for using PKCS#11 providers
 
 Group:          Development/Libraries
@@ -83,6 +83,9 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
+* Fri Aug 21 2009 Tomas Mraz <tmraz@redhat.com> - 1.07-4
+- rebuilt with new openssl
+
 * Sun Jul 26 2009 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 1.07-3
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_12_Mass_Rebuild
 
