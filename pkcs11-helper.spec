@@ -1,9 +1,9 @@
 Name:           pkcs11-helper
 Version:        1.07
-Release:        4%{?dist}
+Release:        5%{?dist}
 Summary:        A library for using PKCS#11 providers
 
-Group:          Development/Libraries
+Group:          System Environment/Libraries
 License:        GPLv2 or BSD
 URL:            http://www.opensc-project.org/pkcs11-helper/
 Source0:        http://www.opensc-project.org/files/%{name}/%{name}-%{version}.tar.bz2
@@ -26,7 +26,6 @@ Summary:        Development files for pkcs11-helper
 Group:          Development/Libraries
 Requires:       %{name} = %{version}-%{release}
 Requires:       openssl-devel
-Requires:       pkgconfig
 # for /usr/share/aclocal
 Requires:       automake
 
@@ -83,6 +82,10 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
+* Thu Jul 01 2010 Kalev Lember <kalev@smartlink.ee> - 1.07-5
+- use System Environment/Libraries group for main package
+- removed R: pkgconfig from devel subpackage
+
 * Fri Aug 21 2009 Tomas Mraz <tmraz@redhat.com> - 1.07-4
 - rebuilt with new openssl
 
