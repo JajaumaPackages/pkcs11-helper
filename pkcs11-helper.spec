@@ -1,6 +1,6 @@
 Name:           pkcs11-helper
 Version:        1.07
-Release:        5%{?dist}
+Release:        6%{?dist}
 Summary:        A library for using PKCS#11 providers
 
 Group:          System Environment/Libraries
@@ -82,6 +82,9 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
+* Wed Feb 09 2011 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 1.07-6
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_15_Mass_Rebuild
+
 * Thu Jul 01 2010 Kalev Lember <kalev@smartlink.ee> - 1.07-5
 - use System Environment/Libraries group for main package
 - removed R: pkgconfig from devel subpackage
