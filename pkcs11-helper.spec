@@ -7,7 +7,6 @@ Group:          System Environment/Libraries
 License:        GPLv2 or BSD
 URL:            http://www.opensc-project.org/opensc/wiki/pkcs11-helper
 Source0:        http://www.opensc-project.org/files/%{name}/%{name}-%{version}.tar.bz2
-BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 
 BuildRequires:  doxygen graphviz
 BuildRequires:  openssl-devel
@@ -44,7 +43,6 @@ make %{?_smp_mflags}
 
 
 %install
-rm -rf $RPM_BUILD_ROOT
 make install DESTDIR=$RPM_BUILD_ROOT INSTALL="install -p"
 
 # Use %%doc to install documentation in a standard location
@@ -56,23 +54,17 @@ rm -rf $RPM_BUILD_ROOT%{_datadir}/doc/%{name}/
 rm -f $RPM_BUILD_ROOT%{_libdir}/*.la
 
 
-%clean
-rm -rf $RPM_BUILD_ROOT
-
-
 %post -p /sbin/ldconfig
 
 %postun -p /sbin/ldconfig
 
 
 %files
-%defattr(-,root,root,-)
 %doc AUTHORS ChangeLog COPYING* README THANKS
 %{_libdir}/libpkcs11-helper.so.*
 
 
 %files devel
-%defattr(-,root,root,-)
 %doc apidocdir/*
 %{_includedir}/pkcs11-helper-1.0/
 %{_libdir}/libpkcs11-helper.so
@@ -84,6 +76,7 @@ rm -rf $RPM_BUILD_ROOT
 %changelog
 * Sun Jun 19 2011 Kalev Lember <kalev@smartlink.ee> - 1.08-1
 - Update to 1.08
+- Clean up the spec file for modern rpmbuild
 
 * Wed Feb 09 2011 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 1.07-6
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_15_Mass_Rebuild
