@@ -1,11 +1,11 @@
 Name:           pkcs11-helper
-Version:        1.07
-Release:        6%{?dist}
+Version:        1.08
+Release:        1%{?dist}
 Summary:        A library for using PKCS#11 providers
 
 Group:          System Environment/Libraries
 License:        GPLv2 or BSD
-URL:            http://www.opensc-project.org/pkcs11-helper/
+URL:            http://www.opensc-project.org/opensc/wiki/pkcs11-helper
 Source0:        http://www.opensc-project.org/files/%{name}/%{name}-%{version}.tar.bz2
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 
@@ -82,6 +82,9 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
+* Sun Jun 19 2011 Kalev Lember <kalev@smartlink.ee> - 1.08-1
+- Update to 1.08
+
 * Wed Feb 09 2011 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 1.07-6
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_15_Mass_Rebuild
 
