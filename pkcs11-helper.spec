@@ -1,5 +1,5 @@
 Name:           pkcs11-helper
-Version:        1.08
+Version:        1.09
 Release:        1%{?dist}
 Summary:        A library for using PKCS#11 providers
 
@@ -74,6 +74,9 @@ rm -f $RPM_BUILD_ROOT%{_libdir}/*.la
 
 
 %changelog
+* Wed Aug 17 2011 Kalev Lember <kalevlember@gmail.com> - 1.09-1
+- Update to 1.09
+
 * Sun Jun 19 2011 Kalev Lember <kalev@smartlink.ee> - 1.08-1
 - Update to 1.08
 - Clean up the spec file for modern rpmbuild
