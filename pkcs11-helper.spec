@@ -1,6 +1,6 @@
 Name:           pkcs11-helper
 Version:        1.09
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        A library for using PKCS#11 providers
 
 Group:          System Environment/Libraries
@@ -74,6 +74,9 @@ rm -f $RPM_BUILD_ROOT%{_libdir}/*.la
 
 
 %changelog
+* Sat Jan 14 2012 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 1.09-2
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_17_Mass_Rebuild
+
 * Wed Aug 17 2011 Kalev Lember <kalevlember@gmail.com> - 1.09-1
 - Update to 1.09
 
