@@ -1,12 +1,12 @@
 Name:           pkcs11-helper
-Version:        1.09
-Release:        4%{?dist}
+Version:        1.10
+Release:        1%{?dist}
 Summary:        A library for using PKCS#11 providers
 
 Group:          System Environment/Libraries
 License:        GPLv2 or BSD
 URL:            http://www.opensc-project.org/opensc/wiki/pkcs11-helper
-Source0:        http://www.opensc-project.org/files/%{name}/%{name}-%{version}.tar.bz2
+Source0:        http://downloads.sourceforge.net/opensc/pkcs11-helper-%{version}.tar.bz2
 
 BuildRequires:  doxygen graphviz
 BuildRequires:  openssl-devel
@@ -74,6 +74,9 @@ rm -f $RPM_BUILD_ROOT%{_libdir}/*.la
 
 
 %changelog
+* Tue Apr 02 2013 Kalev Lember <kalevlember@gmail.com> - 1.10-1
+- Update to 1.10
+
 * Thu Feb 14 2013 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 1.09-4
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_19_Mass_Rebuild
 
