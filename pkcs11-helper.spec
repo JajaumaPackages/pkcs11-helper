@@ -1,6 +1,6 @@
 Name:           pkcs11-helper
-Version:        1.10
-Release:        2%{?dist}
+Version:        1.11
+Release:        1%{?dist}
 Summary:        A library for using PKCS#11 providers
 
 Group:          System Environment/Libraries
@@ -74,6 +74,9 @@ rm -f $RPM_BUILD_ROOT%{_libdir}/*.la
 
 
 %changelog
+* Fri Apr 11 2014 Jon Ciesla <limburgher@gmail.com> - 1.11-1
+- Latest upstream, required for openvpn 2.3.3.
+
 * Sun Aug 04 2013 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 1.10-2
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_20_Mass_Rebuild
 
