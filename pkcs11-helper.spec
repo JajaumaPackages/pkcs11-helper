@@ -1,12 +1,13 @@
 Name:           pkcs11-helper
 Version:        1.11
-Release:        3%{?dist}
+Release:        4%{?dist}
 Summary:        A library for using PKCS#11 providers
 
 Group:          System Environment/Libraries
 License:        GPLv2 or BSD
 URL:            http://www.opensc-project.org/opensc/wiki/pkcs11-helper
 Source0:        http://downloads.sourceforge.net/opensc/pkcs11-helper-%{version}.tar.bz2
+Patch1:         0001-certificate-ignore-certificates-without-CKA_ID.patch
 
 BuildRequires:  doxygen graphviz
 BuildRequires:  openssl-devel
@@ -35,7 +36,7 @@ programs using the pkcs11-helper library.
 
 %prep
 %setup -q
-
+%patch1 -p1
 
 %build
 %configure --disable-static --enable-doc
@@ -74,6 +75,9 @@ rm -f $RPM_BUILD_ROOT%{_libdir}/*.la
 
 
 %changelog
+* Tue Dec 09 2014 David Woodhouse <David.Woodhouse@intel.com> - 1.11-4
+- Apply upstream fix for bug #1172237 (ignore objects without CKA_ID)
+
 * Sun Aug 17 2014 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 1.11-3
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_21_22_Mass_Rebuild
 
