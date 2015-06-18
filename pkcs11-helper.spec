@@ -1,6 +1,6 @@
 Name:           pkcs11-helper
 Version:        1.11
-Release:        5%{?dist}
+Release:        6%{?dist}
 Summary:        A library for using PKCS#11 providers
 
 Group:          System Environment/Libraries
@@ -77,6 +77,9 @@ rm -f $RPM_BUILD_ROOT%{_libdir}/*.la
 
 
 %changelog
+* Thu Jun 18 2015 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 1.11-6
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_23_Mass_Rebuild
+
 * Wed Apr 29 2015 David Woodhouse <David.Woodhouse@intel.com> - 1.11-5
 - Migrate ID serialisation format to RFC7512 (#1173554)
 
