@@ -1,6 +1,6 @@
 Name:           pkcs11-helper
 Version:        1.11
-Release:        7%{?dist}
+Release:        8%{?dist}
 Summary:        A library for using PKCS#11 providers
 
 Group:          System Environment/Libraries
@@ -77,6 +77,9 @@ rm -f $RPM_BUILD_ROOT%{_libdir}/*.la
 
 
 %changelog
+* Thu Feb 04 2016 Fedora Release Engineering <releng@fedoraproject.org> - 1.11-8
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_24_Mass_Rebuild
+
 * Tue Sep 22 2015 David Woodhouse <David.Woodhouse@intel.com> - 1.11-7
 - Fix ID buffer size for URI parsing (#1264645)
 
