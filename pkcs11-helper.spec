@@ -1,13 +1,12 @@
 Name:           pkcs11-helper
-Version:        1.11
-Release:        9%{?dist}
+Version:        1.22
+Release:        1%{?dist}
 Summary:        A library for using PKCS#11 providers
 
 Group:          System Environment/Libraries
 License:        GPLv2 or BSD
 URL:            http://www.opensc-project.org/opensc/wiki/pkcs11-helper
 Source0:        http://downloads.sourceforge.net/opensc/pkcs11-helper-%{version}.tar.bz2
-Patch1:         0001-certificate-ignore-certificates-without-CKA_ID.patch
 Patch2:         pkcs11-helper-rfc7512.patch
 
 BuildRequires:  doxygen graphviz
@@ -37,7 +36,6 @@ programs using the pkcs11-helper library.
 
 %prep
 %setup -q
-%patch1 -p1
 %patch2 -p1
 
 %build
@@ -77,6 +75,9 @@ rm -f $RPM_BUILD_ROOT%{_libdir}/*.la
 
 
 %changelog
+* Tue Feb 21 2017 Nikos Mavrogiannopoulos <nmav@redhat.com> - 1.22-1
+- New upstream release
+
 * Sat Feb 11 2017 Fedora Release Engineering <releng@fedoraproject.org> - 1.11-9
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_26_Mass_Rebuild
 
